@@ -1,0 +1,10 @@
+<h1 class="cover-heading">Question:</h1>
+<p class="lead"><%= @q.content %></p>
+<p class="lead">
+  <%= form_for "quiz", url: check_answer_path, remote: true do %>
+    <%= hidden_field_tag :question, @q.id %>
+    <%= text_field_tag :answer, nil, placeholder: "Answer",class: "form-control" %><br/>
+    <%= submit_tag "Submit", class: "btn btn-lg btn-default" %>
+  <% end %>
+</p>
+<h1 class="cover-heading" id="result"></h1>

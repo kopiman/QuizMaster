@@ -1,0 +1,8 @@
+<h1 class="cover-heading">Questions</h1>
+<p class="lead"><%= notice %></p>
+<p class="lead">
+  <%= react_component 'Questions', { data: @questions } %>
+</p>
+<p class="lead">
+  <%= link_to 'New Question', new_question_path, class: "btn btn-lg btn-default" %>
+</p>
